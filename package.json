@@ -1,0 +1,28 @@
+{
+  "name": "make-color-theme",
+  "version": "0.0.1",
+  "description": "Utility to generate a color theme from a few colors",
+  "author": "Cinnamon <cinnamon_npm@fastmail.com>",
+  "homepage": "https://github.com/cinnamon-bun/make-color-theme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/cinnamon-bun/make-color-theme.git"
+  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf build coverage .nyc_output",
+    "build": "tsc",
+    "test": "tap -Rspecy --jobs=1 build/test/*.test.js",
+    "test-coverage": "npm test -- --coverage-report=lcov",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "@types/tap": "^14.10.1",
+    "tap": "^14.10.8",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+  }
+}
