@@ -23,6 +23,5 @@
     "tap": "^14.10.8",
     "typescript": "^3.9.7"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
