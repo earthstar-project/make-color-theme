@@ -2,6 +2,9 @@ import {
     Theme,
 } from './theme';
 
+// "styles" are specific CSS rules made from a Theme.
+// this is just an example; make your own!
+
 export interface Styles {
     sPage: React.CSSProperties,
     sCard: React.CSSProperties,
@@ -18,8 +21,8 @@ export let makeStyles = (theme: Theme): Styles => {
     let sCard: React.CSSProperties = {
         background: theme.card,
         color: theme.text,
-        padding: 'var(--s0)',
-        borderRadius: 'var(--slightlyRound)',
+        padding: 10,
+        borderRadius: 5,
         boxShadow: '5px 15px 20px -5px rgba(0,0,0,0.17)',
     }
     let sLoudButton: React.CSSProperties = {
