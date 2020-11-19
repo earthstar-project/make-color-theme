@@ -1,6 +1,6 @@
 {
   "name": "make-color-theme",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Utility to generate a color theme from a few colors",
   "author": "Cinnamon <cinnamon_npm@fastmail.com>",
   "homepage": "https://github.com/cinnamon-bun/make-color-theme",
