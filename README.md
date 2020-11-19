@@ -6,7 +6,11 @@ Given 3 input colors, create a full palette of colors in light mode and dark mod
 
 ![](img/styles.png)
 
-# Vocabulary
+# Install
+
+`npm install make-color-theme`
+
+# How it works
 
 Follow this process for making color themes:
 
