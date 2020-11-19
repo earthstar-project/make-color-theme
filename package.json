@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "rm -rf build coverage .nyc_output",
     "build": "tsc",
-    "test": "tap -Rspecy --jobs=1 build/test/*.test.js",
+    "test": "tap -Rspecy --jobs=1 build/test/test.js",
     "test-coverage": "npm test -- --coverage-report=lcov",
     "prepublishOnly": "npm run clean && npm run build"
   },

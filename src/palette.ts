@@ -36,10 +36,13 @@ export interface FullPalette {
 //================================================================================
 // CONVERT BETWEEN COLORS AND HEX STRINGS
 
+let clamp = (x: number, lo: number, hi: number): number =>
+    Math.max(lo, Math.min(hi, x));
+
 export let cToHexString = (c: ColorRGB): string => {
-    let rh = Math.round(c.r * 255).toString(16).padStart(2, '0');
-    let gh = Math.round(c.g * 255).toString(16).padStart(2, '0');
-    let bh = Math.round(c.b * 255).toString(16).padStart(2, '0');
+    let rh = clamp(Math.round(c.r * 255), 0, 255).toString(16).padStart(2, '0');
+    let gh = clamp(Math.round(c.g * 255), 0, 255).toString(16).padStart(2, '0');
+    let bh = clamp(Math.round(c.b * 255), 0, 255).toString(16).padStart(2, '0');
     return '#' + rh + gh + bh;
 }
 
@@ -143,7 +146,7 @@ export let forceBasicPaletteToDarkMode = (p: BasicPalette): BasicPalette =>
     !paletteIsLight(p) ? p : invertBasicPalette(p);
 
 export let forceFullPaletteToLightMode = (p: FullPalette): FullPalette =>
-    !paletteIsLight(p) ? p : invertFullPalette(p);
+    paletteIsLight(p) ? p : invertFullPalette(p);
 
 export let forceFullPaletteToDarkMode = (p: FullPalette): FullPalette =>
     !paletteIsLight(p) ? p : invertFullPalette(p);
